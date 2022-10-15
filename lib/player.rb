@@ -1,5 +1,15 @@
+require './lib/display'
+require './lib/game_logic'
+
 class Player
-  attr_accessor :name, :game_piece, :score
+
+  include Display
+  include GameLogic
+  
+  attr_accessor \
+    :name, 
+    :game_piece,
+    :score
   
   @@other_game_piece = ""
 
@@ -7,16 +17,6 @@ class Player
     set_player_name(player_number)
     set_game_piece
     @score = 0
-  end
-
-  private 
-
-  def banner
-    clear
-    puts "|=============================|"
-    puts "|==== Let the games begin ====|"
-    puts "|=============================|"
-    puts ''
   end
 
   def set_player_name(player_number)

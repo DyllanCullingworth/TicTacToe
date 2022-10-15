@@ -1,11 +1,5 @@
-require_relative 'lib/player'
-require_relative 'lib/tic_tac_toe'
-
-
-
-def clear
-  print "\e[2J\e[H"
-end
+require './lib/player'
+require './lib/tic_tac_toe'
 
 p1 = Player.new(1)
 p2 = Player.new(2)
