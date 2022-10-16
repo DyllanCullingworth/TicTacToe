@@ -31,6 +31,11 @@ module Display
 
     HEREDOC
   end
+
+  def prompt(message)
+    puts message
+    gets.chomp
+  end
   
   def clear
     print "\e[2J\e[H"
